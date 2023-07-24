@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Zhao Yao Final Project</string>
     <string name="welcome">Hello! Welcome to Zhao Yao Final Project!</string>
+    <string name="weather">18° 北京 🌤 89 良</string>
+    <string name="search">搜索或输入网址</string>
+    <string name="msg1">这些重大问题，习主席的回答掷地有声</string>
+    <string name="msg2">美媒：五角大楼盯上谷歌在华AI中心 谷歌忙安抚</string>
+    <string name="media">置顶 新华社媒体</string>
 </resources>
