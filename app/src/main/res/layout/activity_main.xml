@@ -53,37 +53,67 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:background="@color/lavender"
+        android:clickable="true"
         android:text="@string/search"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <EditText
-        android:id="@+id/editTextText"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="343dp"
         android:layout_height="100dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="text"
         android:text="@string/msg1"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ll1" />
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="380dp"
-        android:layout_height="131dp"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="376dp"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="text"
         android:text="@string/msg2"
-        android:textSize="14sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/video" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/user" />
+    </LinearLayout>
 
     <!--TODO: 添加搜索框、两则新闻、底部菜单栏 -->
 
