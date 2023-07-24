@@ -10,11 +10,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello! Welcome to Zhao Yao Final Project!"
+        android:text="@string/welcome"
         tools:layout_editor_absoluteX="165dp"
         tools:layout_editor_absoluteY="276dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
