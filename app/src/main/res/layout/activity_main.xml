@@ -48,17 +48,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/nju" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@color/lavender"
-        android:clickable="true"
-        android:text="@string/search"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:queryHint="请输入搜索内容"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
@@ -98,23 +92,24 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            app:srcCompat="@drawable/home" />
+            app:srcCompat="@drawable/home"
+            android:focusable="true" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            app:srcCompat="@drawable/video" />
+            app:srcCompat="@drawable/video"
+            android:focusable="true" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            app:srcCompat="@drawable/user" />
+            app:srcCompat="@drawable/user"
+            android:focusable="true" />
     </LinearLayout>
-
-    <!--TODO: 添加搜索框、两则新闻、底部菜单栏 -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
