@@ -1,8 +1,13 @@
 package com.zhaoyao.app
 
+import android.animation.Animator
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.animation.DecelerateInterpolator
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         Log.v("ZhaoYaoApp", "Main activity onCreate ; time = ${System.currentTimeMillis()}")
 
         addRecycleView()
+
+        showValueAnim()
     }
 
     override fun onResume() {
@@ -35,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "Hello World!", Toast.LENGTH_SHORT).show()
     }
 
-    fun addRecycleView(){
+    private fun addRecycleView() {
         initText1()//初始化数据
         val recyclerView1 = findViewById<RecyclerView>(R.id.rv1)
         val layoutManager1 = LinearLayoutManager(this)
@@ -51,21 +58,75 @@ class MainActivity : AppCompatActivity() {
         recyclerView2.adapter = adapter2
     }
 
-    private fun initText1(){
-        repeat(1){
-            textList1.add(NewsText1("这些重大问题，习近平的回答掷地有声","置顶","新华社新媒体"))
-            textList1.add(NewsText1("习近平会见”元老会“代表团","置顶", "央视网新闻"))
+    private fun initText1() {
+        repeat(1) {
+            textList1.add(NewsText1("这些重大问题，习近平的回答掷地有声", "置顶", "新华社新媒体"))
+            textList1.add(NewsText1("习近平会见”元老会“代表团", "置顶", "央视网新闻"))
         }
 
 
     }
-    private fun initText2(){
-        repeat(1){
-            textList2.add(NewsText2("美媒：五角大楼盯上谷歌在华AI中心 谷歌忙安抚","热点","热点消息", R.drawable.news_pic1))
-            textList2.add(NewsText2("蔡英文财产曝光：存款5406万 名下拥有6笔不动产","热点","热点消息", R.drawable.news_pic2))
+
+    private fun initText2() {
+        repeat(1) {
+            textList2.add(
+                NewsText2(
+                    "美媒：五角大楼盯上谷歌在华AI中心 谷歌忙安抚",
+                    "热点",
+                    "热点消息",
+                    R.drawable.news_pic1
+                )
+            )
+            textList2.add(
+                NewsText2(
+                    "蔡英文财产曝光：存款5406万 名下拥有6笔不动产",
+                    "热点",
+                    "热点消息",
+                    R.drawable.news_pic2
+                )
+            )
         }
+    }
+
+    private fun showValueAnim() {
+        val view = findViewById<TextView>(R.id.textView)
+        val valueAnim = ValueAnimator.ofInt(0, 100)
+        valueAnim?.duration = 50000L
+        valueAnim?.interpolator = DecelerateInterpolator(10f)
+        valueAnim?.addUpdateListener {
+            val currentValue = it.animatedValue as Int
+            view.alpha = currentValue / 100f //透明度渐增
+        }
+
+        valueAnim?.addListener(object : Animator.AnimatorListener {
+            override fun onAnimationStart(animation: Animator) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animator, isReverse: Boolean) {
+
+            }
+
+
+            override fun onAnimationEnd(animation: Animator) {
+
+            }
+
+
+            override fun onAnimationCancel(animation: Animator) {
+
+            }
+
+
+            override fun onAnimationRepeat(animation: Animator) {
+
+            }
+
+        })
+
+        valueAnim?.start()
     }
 }
 
-class NewsText1(val text1:String, val text2:String, val text3:String)
-class NewsText2(val text1:String, val text2:String, val text3:String, val imageId: Int)
+class NewsText1(val text1: String, val text2: String, val text3: String)
+class NewsText2(val text1: String, val text2: String, val text3: String, val imageId: Int)

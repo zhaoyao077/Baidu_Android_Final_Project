@@ -17,6 +17,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 属性动画 示例   -->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_loading"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="#ff0000" />-->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="100dp"
