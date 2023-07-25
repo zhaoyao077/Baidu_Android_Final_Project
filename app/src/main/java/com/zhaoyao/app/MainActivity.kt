@@ -10,7 +10,6 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.animation.DecelerateInterpolator
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -139,7 +138,7 @@ class MainActivity : AppCompatActivity() {
         // 显示 loading 界面
         progressBar = findViewById(R.id.progressBar1)
         progressBar.visibility = View.VISIBLE
-        val linearLayout1 =findViewById<LinearLayout>(R.id.ll2)
+        val linearLayout1 = findViewById<LinearLayout>(R.id.ll2)
         linearLayout1?.setBackgroundColor(Color.WHITE)
 
         // 延迟 300ms 后跳转到目标 Activity
@@ -155,6 +154,3 @@ class MainActivity : AppCompatActivity() {
         }, LOADING_DELAY) // 延迟 300ms
     }
 }
-
-class NewsText1(val text1: String, val text2: String, val text3: String)
-class NewsText2(val text1: String, val text2: String, val text3: String, val imageId: Int)
