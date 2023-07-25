@@ -35,7 +35,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onTextViewClick"
+        />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -91,7 +93,27 @@
         app:layout_constraintTop_toBottomOf="@+id/rv1" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"

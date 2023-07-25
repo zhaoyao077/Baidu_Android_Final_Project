@@ -2,11 +2,17 @@ package com.zhaoyao.app
 
 import android.animation.Animator
 import android.animation.ValueAnimator
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -125,6 +131,28 @@ class MainActivity : AppCompatActivity() {
         })
 
         valueAnim?.start()
+    }
+
+    private val LOADING_DELAY: Long = 2000 // 300ms
+    private lateinit var progressBar: ProgressBar
+    fun onTextViewClick(view: View) {
+        // 显示 loading 界面
+        progressBar = findViewById(R.id.progressBar1)
+        progressBar.visibility = View.VISIBLE
+        val linearLayout1 =findViewById<LinearLayout>(R.id.ll2)
+        linearLayout1?.setBackgroundColor(Color.WHITE)
+
+        // 延迟 300ms 后跳转到目标 Activity
+        Handler(Looper.getMainLooper()).postDelayed({
+            // 隐藏 loading 界面
+            progressBar.visibility = View.GONE
+
+            // 跳转到目标 Activity
+            val intent = Intent(this, WeatherActivity::class.java)
+            startActivity(intent)
+
+
+        }, LOADING_DELAY) // 延迟 300ms
     }
 }
 
