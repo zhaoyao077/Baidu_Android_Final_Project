@@ -18,20 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.v("ZhaoYaoApp", "Main activity onCreate ; time = ${System.currentTimeMillis()}")
 
-        //recyclerview的写法
-        initText1()//初始化数据
-        val recyclerView1 = findViewById<RecyclerView>(R.id.rv1)
-        val layoutManager1 = LinearLayoutManager(this)
-        recyclerView1.layoutManager = layoutManager1
-        val adapter1 = RVAdapter1(textList1)//上面
-        recyclerView1.adapter = adapter1
-
-        initText2()
-        val recyclerView2 = findViewById<RecyclerView>(R.id.rv2)
-        val layoutManager2 = LinearLayoutManager(this)
-        recyclerView2.layoutManager = layoutManager2
-        val adapter2 = RVAdapter2(textList2)//下面
-        recyclerView2.adapter = adapter2
+        addRecycleView()
     }
 
     override fun onResume() {
@@ -46,6 +33,22 @@ class MainActivity : AppCompatActivity() {
 
     fun showToast(view: View) {
         Toast.makeText(this, "Hello World!", Toast.LENGTH_SHORT).show()
+    }
+
+    fun addRecycleView(){
+        initText1()//初始化数据
+        val recyclerView1 = findViewById<RecyclerView>(R.id.rv1)
+        val layoutManager1 = LinearLayoutManager(this)
+        recyclerView1.layoutManager = layoutManager1
+        val adapter1 = RVAdapter1(textList1)//上面
+        recyclerView1.adapter = adapter1
+
+        initText2()
+        val recyclerView2 = findViewById<RecyclerView>(R.id.rv2)
+        val layoutManager2 = LinearLayoutManager(this)
+        recyclerView2.layoutManager = layoutManager2
+        val adapter2 = RVAdapter2(textList2)//下面
+        recyclerView2.adapter = adapter2
     }
 
     private fun initText1(){
