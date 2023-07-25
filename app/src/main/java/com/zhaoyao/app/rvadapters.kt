@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 
-class rvadapter1(val textList: List<news1>):
-    RecyclerView.Adapter<rvadapter1.ViewHolder>(){
+class RVAdapter1(val textList: List<NewsText1>):
+    RecyclerView.Adapter<RVAdapter1.ViewHolder>(){
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val text1_demo1: TextView = view.findViewById(R.id.list_tv2)
         val text2_demo1: TextView = view.findViewById(R.id.list_tv3)
@@ -33,8 +33,8 @@ class rvadapter1(val textList: List<news1>):
     override fun getItemCount() = textList.size
 }
 
-class rvadapter2(val textList2: List<news2>):
-    RecyclerView.Adapter<rvadapter2.ViewHolder2>(){
+class RVAdapter2(val textList2: List<NewsText2>):
+    RecyclerView.Adapter<RVAdapter2.ViewHolder2>(){
     inner class ViewHolder2(view: View) : RecyclerView.ViewHolder(view){
         val text1_demo2: TextView = view.findViewById(R.id.list2_tv1)
         val text2_demo2: TextView = view.findViewById(R.id.list2_tv2)
