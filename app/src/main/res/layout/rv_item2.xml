@@ -18,10 +18,7 @@
             android:layout_width="204dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
-
             android:layout_marginTop="0dp"
-            android:onClick="showToast"
-
             android:text="美媒：五角大楼盯上谷歌在华AI中心 谷歌忙安抚"
             android:textSize="16sp"
             android:textStyle="bold" />

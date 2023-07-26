@@ -23,12 +23,12 @@
         android:layout_height="72dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
+        android:onClick="onTextViewClick"
         android:text="@string/weather"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onTextViewClick" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -107,8 +107,8 @@
         android:id="@+id/ll3"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal"
         android:background="@color/white"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

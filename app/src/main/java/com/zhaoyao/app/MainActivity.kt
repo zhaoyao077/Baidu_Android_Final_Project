@@ -19,8 +19,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
-    private val textList1 = ArrayList<NewsText1>()//没图
-    private val textList2 = ArrayList<NewsText2>()//有图
+    private val textList1 = ArrayList<NewsText1>()
+    private val textList2 = ArrayList<NewsText2>()
+
+    private val delay: Long = 2000
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         Log.v("ZhaoYaoApp", "Main activity onCreate ; time = ${System.currentTimeMillis()}")
 
+        //初始化新闻列表
         addRecycleView()
 
+        //展示天气图标渐显效果
         showValueAnim()
     }
 
@@ -48,18 +53,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addRecycleView() {
-        initText1()//初始化数据
+        initText1()
         val recyclerView1 = findViewById<RecyclerView>(R.id.rv1)
         val layoutManager1 = LinearLayoutManager(this)
         recyclerView1.layoutManager = layoutManager1
-        val adapter1 = RVAdapter1(textList1)//上面
+        val adapter1 = RVAdapter1(textList1)
         recyclerView1.adapter = adapter1
 
         initText2()
         val recyclerView2 = findViewById<RecyclerView>(R.id.rv2)
         val layoutManager2 = LinearLayoutManager(this)
         recyclerView2.layoutManager = layoutManager2
-        val adapter2 = RVAdapter2(textList2)//下面
+        val adapter2 = RVAdapter2(textList2)
         recyclerView2.adapter = adapter2
     }
 
@@ -68,8 +73,6 @@ class MainActivity : AppCompatActivity() {
             textList1.add(NewsText1("这些重大问题，习近平的回答掷地有声", "置顶", "新华社新媒体"))
             textList1.add(NewsText1("习近平会见”元老会“代表团", "置顶", "央视网新闻"))
         }
-
-
     }
 
     private fun initText2() {
@@ -105,26 +108,18 @@ class MainActivity : AppCompatActivity() {
 
         valueAnim?.addListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(animation: Animator) {
-
             }
 
             override fun onAnimationEnd(animation: Animator, isReverse: Boolean) {
-
             }
-
 
             override fun onAnimationEnd(animation: Animator) {
-
             }
-
 
             override fun onAnimationCancel(animation: Animator) {
-
             }
 
-
             override fun onAnimationRepeat(animation: Animator) {
-
             }
 
         })
@@ -132,8 +127,6 @@ class MainActivity : AppCompatActivity() {
         valueAnim?.start()
     }
 
-    private val LOADING_DELAY: Long = 2000 // 300ms
-    private lateinit var progressBar: ProgressBar
     fun onTextViewClick(view: View) {
         // 显示 loading 界面
         progressBar = findViewById(R.id.progressBar1)
@@ -145,12 +138,9 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             // 隐藏 loading 界面
             progressBar.visibility = View.GONE
-
             // 跳转到目标 Activity
             val intent = Intent(this, WeatherActivity::class.java)
             startActivity(intent)
-
-
-        }, LOADING_DELAY) // 延迟 300ms
+        }, delay)
     }
 }

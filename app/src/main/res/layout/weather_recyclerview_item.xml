@@ -8,10 +8,10 @@
         android:id="@+id/tv1"
         android:layout_width="100dp"
         android:layout_height="20dp"
-        android:gravity="center"
-        android:text="ddd"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="6dp"></TextView>
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="ddd"></TextView>
 
     <ImageView
         android:id="@+id/img1"
