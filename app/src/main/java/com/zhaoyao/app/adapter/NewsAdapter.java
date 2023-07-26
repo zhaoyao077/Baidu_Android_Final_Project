@@ -18,7 +18,7 @@ import com.zhaoyao.app.R;
 import java.util.List;
 
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private List<News_bean> mContactList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
@@ -71,7 +71,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
         News_bean news_bean = mContactList.get(position);
-        if(news_bean.getPic()!=null) {
+        if (news_bean.getPic() != null) {
             Bitmap bitmap = BitmapFactory.decodeFile(news_bean.getPic());
             holder.image_news.setImageBitmap(bitmap);
         }

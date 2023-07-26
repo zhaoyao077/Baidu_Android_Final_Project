@@ -14,12 +14,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -30,6 +24,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import com.zhaoyao.app.MainActivity;
 import com.zhaoyao.app.R;
@@ -124,7 +122,7 @@ public class Frag_user extends Fragment {
                     startActivity(intent);
                 }
             });
-        else{
+        else {
             //获取用户信息
             Map<String, String> info = new HashMap<>();
             UserService US = new UserService(getContext());
@@ -140,7 +138,7 @@ public class Frag_user extends Fragment {
             age.setText(info.get("age"));
             sex.setText(info.get("sex"));
             photopath = info.get("photo");
-            if(photopath !=null) {
+            if (photopath != null) {
                 Bitmap bitmap = BitmapFactory.decodeFile(photopath);
                 photo.setImageBitmap(bitmap);
             }
@@ -149,26 +147,26 @@ public class Frag_user extends Fragment {
             set_photo.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     //获取内容
-                    set_photo_layout =View.inflate(getContext(),R.layout.dialog_picture,null);
+                    set_photo_layout = View.inflate(getContext(), R.layout.dialog_picture, null);
                     setLayout(photopath);
                     //创建对象
-                    AlertDialog.Builder b=new AlertDialog.Builder(getContext());
+                    AlertDialog.Builder b = new AlertDialog.Builder(getContext());
                     //修改标题
                     b.setTitle("点击图片更改头像");
                     //赋值内容设置窗口
                     b.setView(set_photo_layout);
                     //修改
-                    b.setPositiveButton("确定",new DialogInterface.OnClickListener() {
+                    b.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             UserService US = new UserService(getContext());
-                            US.update_photo(user,photopath);
+                            US.update_photo(user, photopath);
                             Bitmap bitmap = BitmapFactory.decodeFile(photopath);
                             photo.setImageBitmap(bitmap);
 
                         }
                     });
-                    b.setNegativeButton("取消",null);
+                    b.setNegativeButton("取消", null);
 
 
                     b.show();
@@ -181,9 +179,9 @@ public class Frag_user extends Fragment {
 
     }
 
-    private void setLayout(String photopath){
+    private void setLayout(String photopath) {
         img = set_photo_layout.findViewById(R.id.user_pic);
-        if(photopath !=null) {
+        if (photopath != null) {
             Bitmap bitmap = BitmapFactory.decodeFile(photopath);
             img.setImageBitmap(bitmap);
         }
@@ -223,31 +221,28 @@ public class Frag_user extends Fragment {
     private void handleImageOnKitKat(Intent data) {
         String imagePath = null;
         try {
-        Uri uri = data.getData();
-        Log.d("TAG", "handleImageOnKitKat: uri is " + uri);
+            Uri uri = data.getData();
+            Log.d("TAG", "handleImageOnKitKat: uri is " + uri);
 
-        if (DocumentsContract.isDocumentUri(getContext(), uri)) {
-            // 如果是document类型的Uri，则通过document id处理
-            String docId = DocumentsContract.getDocumentId(uri);
-            if("com.android.providers.media.documents".equals(uri.getAuthority())) {
-                String id = docId.split(":")[1]; // 解析出数字格式的id
-                String selection = MediaStore.Images.Media._ID + "=" + id;
-                imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+            if (DocumentsContract.isDocumentUri(getContext(), uri)) {
+                // 如果是document类型的Uri，则通过document id处理
+                String docId = DocumentsContract.getDocumentId(uri);
+                if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
+                    String id = docId.split(":")[1]; // 解析出数字格式的id
+                    String selection = MediaStore.Images.Media._ID + "=" + id;
+                    imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+                } else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
+                    Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docId));
+                    imagePath = getImagePath(contentUri, null);
+                }
+            } else if ("content".equalsIgnoreCase(uri.getScheme())) {
+                // 如果是content类型的Uri，则使用普通方式处理
+                imagePath = getImagePath(uri, null);
+            } else if ("file".equalsIgnoreCase(uri.getScheme())) {
+                // 如果是file类型的Uri，直接获取图片路径即可
+                imagePath = uri.getPath();
             }
-            else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
-                Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docId));
-                imagePath = getImagePath(contentUri, null);
-            }
-        }
-        else if ("content".equalsIgnoreCase(uri.getScheme())) {
-            // 如果是content类型的Uri，则使用普通方式处理
-            imagePath = getImagePath(uri, null);
-        }
-        else if ("file".equalsIgnoreCase(uri.getScheme())) {
-            // 如果是file类型的Uri，直接获取图片路径即可
-            imagePath = uri.getPath();
-        }
-        displayImage(imagePath); // 根据图片路径显示图片
+            displayImage(imagePath); // 根据图片路径显示图片
         } catch (Exception e) {
             e.printStackTrace();// 输出异常信息
 
@@ -278,8 +273,7 @@ public class Frag_user extends Fragment {
         if (imagePath != null) {
             setLayout(imagePath);
             photopath = imagePath;
-        }
-        else {
+        } else {
             Toast.makeText(getContext(), "failed to get image", Toast.LENGTH_SHORT).show();
         }
     }

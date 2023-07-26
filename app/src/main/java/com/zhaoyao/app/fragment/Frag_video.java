@@ -2,14 +2,13 @@ package com.zhaoyao.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.zhaoyao.app.Adapter.VideoAdapter;
 import com.zhaoyao.app.Bean.Video_bean;
@@ -96,7 +95,7 @@ public class Frag_video extends Fragment {
         });
     }
 
-    private void addVideo(){
+    private void addVideo() {
         videoList = JsonParse.getInstance().getVideoList(MainActivity.video_data);
     }
 }

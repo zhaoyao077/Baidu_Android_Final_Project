@@ -1,9 +1,9 @@
 package com.zhaoyao.app;
 
-import com.zhaoyao.app.Bean.News_bean;
-import com.zhaoyao.app.Bean.Video_bean;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.zhaoyao.app.Bean.News_bean;
+import com.zhaoyao.app.Bean.Video_bean;
 
 import java.lang.reflect.Type;
 import java.util.List;

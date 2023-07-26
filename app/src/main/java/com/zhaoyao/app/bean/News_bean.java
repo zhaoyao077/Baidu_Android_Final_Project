@@ -6,14 +6,14 @@ public class News_bean {
     private String tip;
     private String pic;
 
-    public News_bean(String title, String subtitle,String tip, String pic){
+    public News_bean(String title, String subtitle, String tip, String pic) {
         this.title = title;
         this.subtitle = subtitle;
         this.tip = tip;
         this.pic = pic;
     }
 
-    public News_bean(String title, String subtitle,String tip){
+    public News_bean(String title, String subtitle, String tip) {
         this.title = title;
         this.subtitle = subtitle;
         this.tip = tip;
@@ -34,6 +34,7 @@ public class News_bean {
     public String getSubtitle() {
         return subtitle;
     }
+
     public void setTip(String Tip) {
         this.tip = tip;
     }
@@ -41,6 +42,7 @@ public class News_bean {
     public String getTip() {
         return tip;
     }
+
     public void setPic(String pic) {
         this.pic = pic;
     }

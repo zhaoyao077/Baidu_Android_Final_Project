@@ -1,8 +1,16 @@
 package com.zhaoyao.app;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.zhaoyao.app.Fragment.Frag_home;
+import com.zhaoyao.app.Fragment.Frag_user;
+import com.zhaoyao.app.Fragment.Frag_video;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -10,15 +18,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.*;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-
-import com.zhaoyao.app.Fragment.Frag_home;
-import com.zhaoyao.app.Fragment.Frag_user;
-import com.zhaoyao.app.Fragment.Frag_video;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -196,19 +195,19 @@ public class MainActivity extends AppCompatActivity {
         Frag_user f3 = new Frag_user();
         switch (v.getId()) {
             case R.id.home:
-                if(frag != 1) {
+                if (frag != 1) {
                     ft.replace(R.id.frag, f1);
                     frag = 1;
                 }
                 break;
             case R.id.video:
-                if(frag != 2) {
+                if (frag != 2) {
                     ft.replace(R.id.frag, f2);
                     frag = 2;
                 }
                 break;
             case R.id.user:
-                if(frag != 3) {
+                if (frag != 3) {
                     ft.replace(R.id.frag, f3);
                     frag = 3;
                 }

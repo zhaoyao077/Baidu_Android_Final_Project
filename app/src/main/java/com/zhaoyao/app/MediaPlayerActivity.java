@@ -1,7 +1,5 @@
 package com.zhaoyao.app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MediaPlayerActivity extends AppCompatActivity {
 
@@ -37,7 +37,8 @@ public class MediaPlayerActivity extends AppCompatActivity {
 
         mMediaController.setMediaPlayer(video);
         video.setMediaController(mMediaController);
-        video.start();sig = 1;
+        video.start();
+        sig = 1;
 
 
         //返回

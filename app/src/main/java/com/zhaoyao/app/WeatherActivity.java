@@ -1,12 +1,12 @@
 package com.zhaoyao.app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhaoyao.app.Adapter.WeatherAdapter;
 import com.zhaoyao.app.Bean.Weather_bean;
@@ -45,9 +45,9 @@ public class WeatherActivity extends AppCompatActivity {
     private void addWeather() {
         Weather_bean now = new Weather_bean("现在", R.drawable.clear);
         weatherList.add(now);
-        int wea[] = {R.drawable.clear,R.drawable.clear,R.drawable.rainy,R.drawable.cloudy};
+        int wea[] = {R.drawable.clear, R.drawable.clear, R.drawable.rainy, R.drawable.cloudy};
         for (int i = 1; i < 12; i++) {
-            Weather_bean last = new Weather_bean(i + "时", wea[i%4]);
+            Weather_bean last = new Weather_bean(i + "时", wea[i % 4]);
             weatherList.add(last);
         }
 

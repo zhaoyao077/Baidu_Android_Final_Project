@@ -102,7 +102,7 @@ public class UserService {
     public void update_photo(String username, String value) {
         SQLiteDatabase sdb = dbHelper.getReadableDatabase();
         String sql = "update  user  set photo = ? where username = ?";
-        sdb.execSQL(sql,new String[]{value,username} );
+        sdb.execSQL(sql, new String[]{value, username});
         sdb.close();
     }
 

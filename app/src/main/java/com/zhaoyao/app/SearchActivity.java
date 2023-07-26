@@ -1,14 +1,14 @@
 package com.zhaoyao.app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 
 public class SearchActivity extends AppCompatActivity {
@@ -47,6 +47,7 @@ public class SearchActivity extends AppCompatActivity {
                 TurntoWeb();
                 return false;
             }
+
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;

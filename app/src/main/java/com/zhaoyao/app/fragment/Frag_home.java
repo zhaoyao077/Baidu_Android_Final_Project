@@ -2,17 +2,16 @@ package com.zhaoyao.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhaoyao.app.Adapter.NewsAdapter;
 import com.zhaoyao.app.AddNews;
@@ -144,8 +143,7 @@ public class Frag_home extends Fragment {
             String newsdata;
             newsdata = getTxtFromAssets();
             newsList = JsonParse.getInstance().getNewsList(newsdata);
-        }
-        else
+        } else
             newsList = JsonParse.getInstance().getNewsList(MainActivity.news_data);
     }
 
