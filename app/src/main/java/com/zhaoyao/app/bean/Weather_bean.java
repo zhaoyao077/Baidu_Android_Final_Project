@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Bean;
+package com.zhaoyao.app.bean;
 
 public class Weather_bean {
     private String weather;

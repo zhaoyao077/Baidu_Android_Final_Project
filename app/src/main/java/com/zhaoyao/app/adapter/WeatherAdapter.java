@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Adapter;
+package com.zhaoyao.app.adapter;
 
 
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhaoyao.app.Bean.Weather_bean;
+import com.zhaoyao.app.bean.Weather_bean;
 import com.zhaoyao.app.R;
 
 import java.util.List;

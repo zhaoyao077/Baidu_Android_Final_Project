@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#11c9c9c9"
-    tools:context=".Fragment.Frag_home">
+    tools:context="com.zhaoyao.app.fragment.Frag_home">
 
     <LinearLayout
         android:id="@+id/weather"
@@ -24,7 +24,6 @@
             android:layout_height="72dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
-            android:onClick="onTextViewClick"
             android:text="18° 北京 🌤 89 良"
             android:textSize="20sp"
             android:textStyle="bold"

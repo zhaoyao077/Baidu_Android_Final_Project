@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Bean;
+package com.zhaoyao.app.bean;
 
 public class Video_bean {
     private String video_src;

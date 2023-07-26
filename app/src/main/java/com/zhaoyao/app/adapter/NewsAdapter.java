@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Adapter;
+package com.zhaoyao.app.adapter;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhaoyao.app.Bean.News_bean;
+import com.zhaoyao.app.bean.News_bean;
 import com.zhaoyao.app.R;
 
 import java.util.List;

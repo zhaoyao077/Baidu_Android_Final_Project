@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhaoyao.app.Adapter.WeatherAdapter;
-import com.zhaoyao.app.Bean.Weather_bean;
+import com.zhaoyao.app.adapter.WeatherAdapter;
+import com.zhaoyao.app.bean.Weather_bean;
 
 import java.util.ArrayList;
 import java.util.List;

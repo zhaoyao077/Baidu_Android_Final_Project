@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.zhaoyao.app.Fragment.Frag_home;
-import com.zhaoyao.app.Fragment.Frag_user;
-import com.zhaoyao.app.Fragment.Frag_video;
+import com.zhaoyao.app.fragment.Frag_home;
+import com.zhaoyao.app.fragment.Frag_user;
+import com.zhaoyao.app.fragment.Frag_video;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

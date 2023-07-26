@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Adapter;
+package com.zhaoyao.app.adapter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.zhaoyao.app.Bean.Video_bean;
+import com.zhaoyao.app.bean.Video_bean;
 import com.zhaoyao.app.MediaPlayerActivity;
 import com.zhaoyao.app.R;
 

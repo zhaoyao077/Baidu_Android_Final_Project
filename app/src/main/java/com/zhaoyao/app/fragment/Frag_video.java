@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Fragment;
+package com.zhaoyao.app.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhaoyao.app.Adapter.VideoAdapter;
-import com.zhaoyao.app.Bean.Video_bean;
+import com.zhaoyao.app.adapter.VideoAdapter;
+import com.zhaoyao.app.bean.Video_bean;
 import com.zhaoyao.app.JsonParse;
 import com.zhaoyao.app.MainActivity;
 import com.zhaoyao.app.R;

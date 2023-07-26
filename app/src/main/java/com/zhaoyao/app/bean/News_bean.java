@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Bean;
+package com.zhaoyao.app.bean;
 
 public class News_bean {
     private String title;

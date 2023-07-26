@@ -1,4 +1,4 @@
-package com.zhaoyao.app.Fragment;
+package com.zhaoyao.app.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhaoyao.app.Adapter.NewsAdapter;
+import com.zhaoyao.app.adapter.NewsAdapter;
 import com.zhaoyao.app.AddNews;
-import com.zhaoyao.app.Bean.News_bean;
+import com.zhaoyao.app.bean.News_bean;
 import com.zhaoyao.app.JsonParse;
 import com.zhaoyao.app.Loading;
 import com.zhaoyao.app.MainActivity;
