@@ -36,8 +36,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onTextViewClick"
-        />
+        android:onClick="onTextViewClick" />
 
     <ImageView
         android:id="@+id/imageView1"
