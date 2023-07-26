@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Zhao Yao Final Project</string>
-    <string name="welcome">Hello! Welcome to Zhao Yao Final Project!</string>
-    <string name="weather">18° 北京 🌤 89 良</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

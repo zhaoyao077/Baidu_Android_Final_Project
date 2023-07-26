@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zhaoyao.app.fragment.Video">
+    tools:context=".Fragment.Frag_user">
 
     <LinearLayout
-        android:id="@+id/ll1"
+        android:id="@+id/linerlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -33,16 +33,20 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp" />
 
+
     </LinearLayout>
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/video_list"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="580dp"-->
-<!--        android:padding="5dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/linerlayout" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_list"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linerlayout" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
