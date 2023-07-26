@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initText1() {
-        repeat(2) {
+        repeat(1) {
             textList1.add(NewsText1("这些重大问题，习近平的回答掷地有声", "置顶", "新华社新媒体"))
             textList1.add(NewsText1("习近平会见”元老会“代表团", "置顶", "央视网新闻"))
         }
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initText2() {
-        repeat(3) {
+        repeat(4) {
             textList2.add(
                 NewsText2(
                     "美媒：五角大楼盯上谷歌在华AI中心 谷歌忙安抚",
