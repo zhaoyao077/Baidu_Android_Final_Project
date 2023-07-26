@@ -10,6 +10,7 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.animation.DecelerateInterpolator
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -17,6 +18,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.zhaoyao.app.fragment.Home
+import com.zhaoyao.app.fragment.User
+import com.zhaoyao.app.fragment.Video
 
 class MainActivity : AppCompatActivity() {
     private val textList1 = ArrayList<NewsText1>()
@@ -25,17 +29,55 @@ class MainActivity : AppCompatActivity() {
     private val delay: Long = 2000
     private lateinit var progressBar: ProgressBar
 
+    private var home: ImageView? = null
+    private var video: ImageView? = null
+    private var user: ImageView? = null
+    private var bundle: Bundle? = null
+    var frag = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        bundle = this.intent.extras
 
         Log.v("ZhaoYaoApp", "Main activity onCreate ; time = ${System.currentTimeMillis()}")
+
+        //初始化Fragment
+        home = findViewById(R.id.home)
+        video = findViewById(R.id.video)
+        user = findViewById(R.id.user)
+        changeFrag(home as View)
 
         //初始化新闻列表
         addRecycleView()
 
         //展示天气图标渐显效果
         showValueAnim()
+    }
+
+    private fun changeFrag(v: View) {
+        val fm = supportFragmentManager
+        val ft = fm.beginTransaction()
+        val f1 = Home()
+        val f2 = Video()
+        val f3 = User()
+        when (v.id) {
+            R.id.home -> if (frag != 1) {
+                ft.replace(R.id.frag, f1)
+                frag = 1
+            }
+
+            R.id.video -> if (frag != 2) {
+                ft.replace(R.id.frag, f2)
+                frag = 2
+            }
+
+            R.id.user -> if (frag != 3) {
+                ft.replace(R.id.frag, f3)
+                frag = 3
+            }
+        }
+        ft.commit()
     }
 
     override fun onResume() {
