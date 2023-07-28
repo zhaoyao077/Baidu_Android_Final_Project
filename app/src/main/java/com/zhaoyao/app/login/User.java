@@ -13,7 +13,6 @@ public class User implements Serializable {
 
     public User() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     public User(String username, String password, int age, String phone, String sex, String photo) {

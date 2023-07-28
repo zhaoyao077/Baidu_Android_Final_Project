@@ -27,13 +27,10 @@ import java.util.List;
  */
 public class Frag_video extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private List<Video_bean> videoList = new ArrayList<>();//定义视频信息列表
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -49,7 +46,6 @@ public class Frag_video extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment Frag_video.
      */
-    // TODO: Rename and change types and number of parameters
     public static Frag_video newInstance(String param1, String param2) {
         Frag_video fragment = new Frag_video();
         Bundle args = new Bundle();

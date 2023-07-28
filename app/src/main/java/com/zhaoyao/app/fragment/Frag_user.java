@@ -45,8 +45,6 @@ import java.util.Map;
  */
 public class Frag_user extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private Button login;
@@ -62,7 +60,6 @@ public class Frag_user extends Fragment {
     private View set_photo_layout;
 
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -78,7 +75,6 @@ public class Frag_user extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment Frag_user.
      */
-    // TODO: Rename and change types and number of parameters
     public static Frag_user newInstance(String param1, String param2) {
         Frag_user fragment = new Frag_user();
         Bundle args = new Bundle();
