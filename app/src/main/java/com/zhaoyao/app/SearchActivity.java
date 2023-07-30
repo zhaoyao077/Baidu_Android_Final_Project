@@ -14,7 +14,6 @@ import androidx.appcompat.widget.SearchView;
 public class SearchActivity extends AppCompatActivity {
 
     private SearchView searchview;
-    private String search_txt;
     private WebView webview;
 
     @Override
@@ -23,10 +22,10 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         searchview = findViewById(R.id.searchView);
         webview = findViewById(R.id.webview);
-//跳转百度
+        //跳转百度
         findViewById(R.id.search).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                TurntoWeb();
+                TurnToWeb();
             }
         });
 
@@ -44,7 +43,7 @@ public class SearchActivity extends AppCompatActivity {
             // 当点击搜索按钮时触发该方法
             @Override
             public boolean onQueryTextSubmit(String query) {
-                TurntoWeb();
+                TurnToWeb();
                 return false;
             }
 
@@ -72,8 +71,8 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    private void TurntoWeb() {
-        search_txt = searchview.getQuery().toString();
+    private void TurnToWeb() {
+        String search_txt = searchview.getQuery().toString();
         //声明WebSettings子类
         WebSettings webSettings = webview.getSettings();
 

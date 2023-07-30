@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         home = findViewById(R.id.home);
         video = findViewById(R.id.video);
         user = findViewById(R.id.user);
-        turn_frag(home);
+        turnFrag(home);
 
         if (bundle != null) {
             if (bundle.getInt("flag") == 1) {
@@ -162,32 +162,32 @@ public class MainActivity extends AppCompatActivity {
 
 
             } else if (bundle.getInt("flag") == 2) {
-                turn_frag(video);
+                turnFrag(video);
             } else if (bundle.getInt("flag") == 3) {
-                turn_frag(user);
+                turnFrag(user);
             }
         }
 
         home.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                turn_frag(view);
+                turnFrag(view);
             }
         });
         video.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                turn_frag(view);
+                turnFrag(view);
             }
         });
         user.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                turn_frag(view);
+                turnFrag(view);
             }
         });
 
     }
 
 
-    public void turn_frag(View v) {
+    public void turnFrag(View v) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         Frag_home f1 = new Frag_home();
