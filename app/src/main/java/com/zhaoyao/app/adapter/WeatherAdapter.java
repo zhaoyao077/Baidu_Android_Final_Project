@@ -11,13 +11,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhaoyao.app.bean.Weather_bean;
+import com.zhaoyao.app.bean.WeatherBean;
 import com.zhaoyao.app.R;
 
 import java.util.List;
 
 public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHolder> {
-    private List<Weather_bean> mContactList;
+    private List<WeatherBean> mContactList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         View contactView;//存储解析到的view
@@ -32,7 +32,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
         }
     }
 
-    public WeatherAdapter(List<Weather_bean> weatherList) {
+    public WeatherAdapter(List<WeatherBean> weatherList) {
         mContactList = weatherList;
     }
 
@@ -46,7 +46,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
             @Override
             public void onClick(View view) {
                 int position = viewHolder.getAdapterPosition();
-                Weather_bean weather_bean = mContactList.get(position);
+                WeatherBean weather_bean = mContactList.get(position);
                 Toast.makeText(view.getContext(), weather_bean.getWeather(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -55,7 +55,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
             @Override
             public void onClick(View view) {
                 int position = viewHolder.getAdapterPosition();
-                Weather_bean weather_bean = mContactList.get(position);
+                WeatherBean weather_bean = mContactList.get(position);
                 Toast.makeText(view.getContext(), weather_bean.getWea_img(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -64,7 +64,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Weather_bean weather_bean = mContactList.get(position);
+        WeatherBean weather_bean = mContactList.get(position);
         holder.image_weather.setImageResource(weather_bean.getWea_img());
         holder.text_weather.setText(weather_bean.getWeather());
     }

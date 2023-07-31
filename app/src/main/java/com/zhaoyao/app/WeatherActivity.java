@@ -9,14 +9,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhaoyao.app.adapter.WeatherAdapter;
-import com.zhaoyao.app.bean.Weather_bean;
+import com.zhaoyao.app.bean.WeatherBean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherActivity extends AppCompatActivity {
 
-    private List<Weather_bean> weatherList = new ArrayList<>();//存储实例化的数据
+    private List<WeatherBean> weatherList = new ArrayList<>();//存储实例化的数据
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +43,11 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     private void addWeather() {
-        Weather_bean now = new Weather_bean("现在", R.drawable.clear);
+        WeatherBean now = new WeatherBean("现在", R.drawable.clear);
         weatherList.add(now);
         int wea[] = {R.drawable.clear, R.drawable.clear, R.drawable.rainy, R.drawable.cloudy};
         for (int i = 1; i < 12; i++) {
-            Weather_bean last = new Weather_bean(i + "时", wea[i % 4]);
+            WeatherBean last = new WeatherBean(i + "时", wea[i % 4]);
             weatherList.add(last);
         }
 

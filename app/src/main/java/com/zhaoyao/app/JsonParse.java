@@ -2,8 +2,8 @@ package com.zhaoyao.app;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.zhaoyao.app.bean.News_bean;
-import com.zhaoyao.app.bean.Video_bean;
+import com.zhaoyao.app.bean.NewsBean;
+import com.zhaoyao.app.bean.VideoBean;
 
 import java.lang.reflect.Type;
 import java.util.List;
@@ -24,32 +24,32 @@ public class JsonParse {
 
     }
 
-    public List<News_bean> getNewsList(String json) {
+    public List<NewsBean> getNewsList(String json) {
         Gson gson = new Gson(); // 使用gson库解析JSON数据
 
         // 创建一个TypeToken的匿名子类对象，并调用对象的getType()方法
 
-        Type listType = new TypeToken<List<News_bean>>() {
+        Type listType = new TypeToken<List<NewsBean>>() {
         }.getType();
 
         // 把获取到的信息集合存到shopList中
 
-        List<News_bean> newsList = gson.fromJson(json.trim(), listType);
+        List<NewsBean> newsList = gson.fromJson(json.trim(), listType);
         return newsList;
 
     }
 
-    public List<Video_bean> getVideoList(String json) {
+    public List<VideoBean> getVideoList(String json) {
         Gson gson = new Gson(); // 使用gson库解析JSON数据
 
         // 创建一个TypeToken的匿名子类对象，并调用对象的getType()方法
 
-        Type listType = new TypeToken<List<Video_bean>>() {
+        Type listType = new TypeToken<List<VideoBean>>() {
         }.getType();
 
         // 把获取到的信息集合存到shopList中
 
-        List<Video_bean> videoList = gson.fromJson(json.trim(), listType);
+        List<VideoBean> videoList = gson.fromJson(json.trim(), listType);
         System.out.print(videoList);
         return videoList;
 

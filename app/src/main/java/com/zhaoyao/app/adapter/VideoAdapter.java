@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.zhaoyao.app.bean.Video_bean;
+import com.zhaoyao.app.bean.VideoBean;
 import com.zhaoyao.app.MediaPlayerActivity;
 import com.zhaoyao.app.R;
 
@@ -20,7 +20,7 @@ import java.util.List;
 
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> {
-    private List<Video_bean> mContactList;
+    private List<VideoBean> mContactList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         View contactView;//存储解析到的view
@@ -38,7 +38,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> 
         }
     }
 
-    public VideoAdapter(List<Video_bean> videoList) {
+    public VideoAdapter(List<VideoBean> videoList) {
         mContactList = videoList;
     }
 
@@ -52,7 +52,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> 
             @Override
             public void onClick(View view) {
                 int position = viewHolder.getAdapterPosition();
-                Video_bean video_bean = mContactList.get(position);
+                VideoBean video_bean = mContactList.get(position);
 
                 Intent intent = new Intent(view.getContext(), MediaPlayerActivity.class);
                 Bundle bundle = new Bundle();
@@ -69,7 +69,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull VideoAdapter.ViewHolder holder, int position) {
-        Video_bean video_bean = mContactList.get(position);
+        VideoBean video_bean = mContactList.get(position);
         holder.video_title.setText(video_bean.getVideo_title());
         holder.username.setText(video_bean.getUsername());
         Glide.with(holder.contactView).load(video_bean.getVideo_img()).into(holder.video);

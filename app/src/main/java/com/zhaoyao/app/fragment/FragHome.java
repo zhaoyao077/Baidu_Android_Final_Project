@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhaoyao.app.adapter.NewsAdapter;
 import com.zhaoyao.app.AddNews;
-import com.zhaoyao.app.bean.News_bean;
+import com.zhaoyao.app.bean.NewsBean;
 import com.zhaoyao.app.JsonParse;
 import com.zhaoyao.app.Loading;
 import com.zhaoyao.app.MainActivity;
@@ -39,7 +39,7 @@ public class FragHome extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private LinearLayout weather;
     private ImageButton addnews;
-    private List<News_bean> newsList = new ArrayList<>();//定义新闻信息列表
+    private List<NewsBean> newsList = new ArrayList<>();//定义新闻信息列表
 
 
     private String mParam1;

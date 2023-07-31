@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zhaoyao.app.adapter.VideoAdapter;
-import com.zhaoyao.app.bean.Video_bean;
+import com.zhaoyao.app.bean.VideoBean;
 import com.zhaoyao.app.JsonParse;
 import com.zhaoyao.app.MainActivity;
 import com.zhaoyao.app.R;
@@ -29,7 +29,7 @@ public class FragVideo extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private List<Video_bean> videoList = new ArrayList<>();//定义视频信息列表
+    private List<VideoBean> videoList = new ArrayList<>();//定义视频信息列表
 
     private String mParam1;
     private String mParam2;
