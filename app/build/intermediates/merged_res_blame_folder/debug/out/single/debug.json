@@ -40,12 +40,12 @@
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\drawable\\user_image.png"
     },
     {
-        "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\drawable-v24_clear.png.flat",
-        "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\drawable-v24\\clear.png"
-    },
-    {
         "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\drawable_ic_launcher_2.xml.flat",
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\drawable\\ic_launcher_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\drawable-v24_clear.png.flat",
+        "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\drawable-v24\\clear.png"
     },
     {
         "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\drawable_comment.xml.flat",
@@ -156,6 +156,10 @@
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\layout\\frag_user_unlogin.xml"
     },
     {
+        "merged": "com.zhaoyao.app-merged_res-20:/layout_frag_video.xml.flat",
+        "source": "com.zhaoyao.app-main-22:/layout/frag_video.xml"
+    },
+    {
         "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\xml\\data_extraction_rules.xml"
     },
@@ -184,10 +188,6 @@
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\layout\\frag_home.xml"
     },
     {
-        "merged": "com.zhaoyao.app-merged_res-20:/xml_data_extraction_rules.xml.flat",
-        "source": "com.zhaoyao.app-main-22:/xml/data_extraction_rules.xml"
-    },
-    {
         "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\layout_item_video.xml.flat",
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\layout\\item_video.xml"
     },
@@ -210,6 +210,10 @@
     {
         "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\drawable_warning.xml.flat",
         "source": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-main-22:\\drawable\\warning.xml"
+    },
+    {
+        "merged": "com.zhaoyao.app-merged_res-20:/layout_frag_home.xml.flat",
+        "source": "com.zhaoyao.app-main-22:/layout/frag_home.xml"
     },
     {
         "merged": "C:\\Users\\ARmi\\.gradle\\daemon\\7.3.3\\com.zhaoyao.app-merged_res-20:\\drawable_clear_day.jpg.flat",

@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.zhaoyao.app.fragment.Frag_home;
-import com.zhaoyao.app.fragment.Frag_user;
-import com.zhaoyao.app.fragment.Frag_video;
+import com.zhaoyao.app.fragment.FragHome;
+import com.zhaoyao.app.fragment.FragUser;
+import com.zhaoyao.app.fragment.FragVideo;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -190,9 +190,9 @@ public class MainActivity extends AppCompatActivity {
     public void turnFrag(View v) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        Frag_home f1 = new Frag_home();
-        Frag_video f2 = new Frag_video();
-        Frag_user f3 = new Frag_user();
+        FragHome f1 = new FragHome();
+        FragVideo f2 = new FragVideo();
+        FragUser f3 = new FragUser();
         switch (v.getId()) {
             case R.id.home:
                 if (frag != 1) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#11c9c9c9"
-    tools:context="com.zhaoyao.app.fragment.Frag_home">
+    tools:context="com.zhaoyao.app.fragment.FragHome">
 
     <LinearLayout
         android:id="@+id/weather"

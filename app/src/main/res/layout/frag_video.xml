@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zhaoyao.app.fragment.Frag_user">
+    tools:context="com.zhaoyao.app.fragment.FragUser">
 
     <LinearLayout
         android:id="@+id/linerlayout"
