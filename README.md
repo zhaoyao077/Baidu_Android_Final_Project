@@ -1,9 +1,13 @@
 # MyProject
 
-> Date: 2023/7/27
+> Updated Date: 2023/7/31
+> 
 > Author: Zhao Yao 赵耀
+> 
+> 建议使用[typora](https://typora.io/)查看该文档
 
 该项目是2023年暑期百度移动端训练营的大作业项目，开发了一个简单的安卓应用。
+apk位置: apk/app-debug.apk
 
 ## 1. Android基本组件介绍
 
